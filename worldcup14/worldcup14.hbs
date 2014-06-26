@@ -1,0 +1,41 @@
+{{!
+/*
+ *  This file is part of 'Football World Cup 2014 Dashlet'.
+ *
+ *  'Football World Cup 2014 Dashlet' is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation.
+ *
+ *  'Football World Cup 2014 Dashlet' is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with 'Football World Cup 2014 Dashlet'.  If not, see http://www.gnu.org/licenses/gpl.html.
+ *
+ * Copyright 2014 Olivier Nepomiachty - All rights reserved.
+ */
+}}
+<div style="background-image: url('custom/clients/base/views/worldcup14/media/wc2014.png'); background-repeat: no-repeat; background-position: right top;">
+{{#if this}}
+{{#each this}}
+	{{#if this.home_team.country}}
+    <div class="news-article">
+        <p><img src="{{{this.url}}}custom/clients/base/views/worldcup14/media/flags/{{{this.home_team.code}}}.png" border="0" />
+        <b>{{{this.home_team.country}}}</b> vs <b>{{{this.away_team.country}}}</b>
+        <img src="{{{this.url}}}custom/clients/base/views/worldcup14/media/flags/{{{this.away_team.code}}}.png" border="0" />
+        <br/>
+        {{{this.home_team.goals}}} - {{{this.away_team.goals}}}&nbsp;
+        {{#if this.winner}}
+        Winner: {{{this.winner}}}
+        {{/if}}
+        <br/>
+        match #{{{this.match_number}}} @ {{{this.location}}} - {{{this.datetime}}} ({{str "LBL_DASHLET_WC14_LOCALTIME"}})</p>
+    </div>
+    {{/if}}
+{{/each}}
+{{else}}
+    <div class="block-footer">{{str "LBL_NO_DATA_AVAILABLE"}}</div>
+{{/if}}
+</div>
