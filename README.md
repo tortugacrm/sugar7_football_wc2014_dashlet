@@ -8,6 +8,6 @@ The end user may bring the dashlet to his home page and get:
 - his favourite team games and results
 
 available in:
-English, French, Dutch, Swedish and Russian.
+English, French, German, Swedish and Russian.
 
 Copyright 2014 Olivier Nepomiachty - All rights reserved.
