@@ -40,9 +40,9 @@ $manifest = array (
 		  'icon' => '',
 		  'is_uninstallable' => true,
 		  'name' => 'Football World Cup 2014',
-		  'published_date' => '2014-06-24 08:00',
+		  'published_date' => '2014-06-29 08:00',
 		  'type' => 'module',
-		  'version' => '1.0.0.24',
+		  'version' => '1.0.1.1',
 		  'remove_tables' => false,
 		  );  
 		  
@@ -54,6 +54,10 @@ $installdefs = array (
     array (
       'from' => '<basepath>/worldcup14/',
       'to' => 'custom/clients/base/views/worldcup14',
+    ),
+    array (
+      'from' => '<basepath>/api.worldcup14/WorldCup14Api.php',
+      'to' => 'custom/clients/base/api/WorldCup14Api.php',
     ),
    ),   
 
